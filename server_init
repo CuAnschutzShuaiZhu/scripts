@@ -20,6 +20,8 @@ sudo apt install python3-pip git
 ## git script
 git clone https://github.com/CuAnschutzShuaiZhu/scripts
 echo "export PATH=/home/shuai/scripts:$PATH" >> .bashrc
+cd script
+chmod +x *
 
 ## samba
 
