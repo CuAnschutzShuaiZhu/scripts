@@ -1,4 +1,8 @@
 #!/bin/bash
+
+## apt install useful package
+sudo apt install vim ufw net-tools
+
 ## alias
 echo 'alias ll="ls -l"' >> .bashrc
 echo 'alias ctl="systemctl"' >> .bashrc
