@@ -1,5 +1,8 @@
 #!/bin/bash
-
+## alias
+echo 'alias ll="ls -l"' >> .bashrc
+echo 'alias ctl="systemctl"' >> .bashrc
+source .bashrc
 ## add shuai to sudoers
 sudo adduser shuai sudo
 
@@ -17,7 +20,7 @@ sudo apt install python3-pip git
 
 
 
-## git script
+## git clone script
 git clone https://github.com/CuAnschutzShuaiZhu/scripts
 echo "export PATH=/home/shuai/scripts:$PATH" >> .bashrc
 cd script
