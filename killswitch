@@ -1,0 +1,5 @@
+#!/bin/bash
+myip=$(curl -s https://api.ipify.org)
+if [$myip != "192.200.158.221"] then
+    systemctl stop qbitorrent-nox
+fi
