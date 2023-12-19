@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sudo killall openvpn
-echo "y" | sudo ufw disenable
+echo "y" | sudo ufw disable
