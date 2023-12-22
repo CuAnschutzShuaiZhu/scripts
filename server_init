@@ -1,23 +1,19 @@
 #!/bin/bash
 
-## apt install useful package
-sudo apt install vim ufw net-tools
-
-## install pip
-sudo apt install python3-pip git
-sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
-pip install tldr
-
-## alias
-echo 'alias ll="ls -l"' >> .bashrc
-echo 'alias ctl="systemctl"' >> .bashrc
-source .bashrc
-
 ## add shuai to sudoers
+su root
+apt update
+apt install sudo
 sudo adduser shuai sudo
 
 ## apt install useful package
+
 sudo apt install vim ufw net-tools
+
+## pip install
+sudo apt install python3-pip git
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+pip install tldr
 
 ## install tailscale
 curl -fsSL https://pkgs.tailscale.com/stable/debian/bookworm.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
@@ -25,8 +21,10 @@ curl -fsSL https://pkgs.tailscale.com/stable/debian/bookworm.tailscale-keyring.l
 sudo apt-get update
 sudo apt-get install tailscale
 
-
-
+## alias
+echo 'alias ll="ls -l"' >> .bashrc
+echo 'alias ctl="systemctl"' >> .bashrc
+source .bashrc
 
 ## git clone script
 git clone https://github.com/CuAnschutzShuaiZhu/scripts
@@ -51,3 +49,4 @@ force directory mode = 0777
 sudo smbpasswd -a shuai
 sudo systemctl restart smbd
 systemctl status smbd
+
