@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo ufw allow ssh
-sudo ufw allow 8212 # qbitorrent
-sudo ufw allow samba
-
