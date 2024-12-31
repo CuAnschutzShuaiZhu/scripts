@@ -9,8 +9,10 @@ sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 pip install tldr
 
 ## alias
-echo 'alias ll="ls -l"' >> .bashrc
-echo 'alias ctl="systemctl"' >> .bashrc
+echo -e "alias ctl='systemctl'" >> ~/.bashrc
+echo -e "alias ll='ls -l'">> ~/.bashrc
+echo -e "alias gitlog='git log --oneline'">> ~/.bashrc
+echo -e "export PATH='$PATH:/home/shuai/scripts'" >> ~/.bashrc
 source .bashrc
 
 ## add shuai to sudoers
@@ -51,3 +53,4 @@ force directory mode = 0777
 sudo smbpasswd -a shuai
 sudo systemctl restart smbd
 systemctl status smbd
+
